@@ -3,7 +3,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { BrowserRouter } from 'react-router-dom';
 
-import Header, { HeaderProps } from '@components/Header';
+import Header, { HeaderTypes } from '@components/Header';
 
 export default {
   title: 'Header/Header',
@@ -13,7 +13,7 @@ export default {
   },
 } as ComponentMeta<typeof Header>;
 
-export const Default: ComponentStory<typeof Header> = (args: HeaderProps) => (
+export const Default: ComponentStory<typeof Header> = (args: HeaderTypes) => (
   <BrowserRouter>
     <Header {...args} />
   </BrowserRouter>

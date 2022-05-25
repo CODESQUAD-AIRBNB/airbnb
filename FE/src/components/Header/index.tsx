@@ -3,11 +3,16 @@ import Logo from '@components/Header/Logo';
 import MyPageButton from '@components/Header/MyPageButton';
 import Navigation from '@components/Header/Navigation';
 
-export type HeaderProps = {
-  headerType: 'main' | 'detail';
+export const HEADER_TYPE: { [key: string]: string } = {
+  MAIN: 'Main',
+  DETAIL: 'Detail',
 };
 
-const Header = ({ headerType }: HeaderProps) => {
+export type HeaderTypes = {
+  headerType: string;
+};
+
+const Header = ({ headerType }: HeaderTypes) => {
   return (
     <S.Container>
       <S.Wrapper>
