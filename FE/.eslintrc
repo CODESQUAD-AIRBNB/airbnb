@@ -13,6 +13,40 @@
   },
   "plugins": ["react", "@typescript-eslint", "import"],
   "rules": {
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "index"],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "@constants",
+            "group": "internal"
+          },
+          {
+            "pattern": "@storybook/**",
+            "group": "external"
+          },
+          {
+            "pattern": "@*/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "./**",
+            "group": "index"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "alphabetize": {
+          "order": "asc"
+        },
+        "newlines-between": "always"
+      }
+    ],
     "react/jsx-filename-extension": ["warn", { "extensions": ["ts", ".tsx"] }],
     "import/extensions": ["error", "ignorePackages", { "ts": "never", "tsx": "never" }],
     "no-unused-vars": 1,
