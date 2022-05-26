@@ -1,11 +1,11 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-const Container = styled.header`
+export const Container = styled.header`
   height: 94px;
 `;
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   width: 1280px;
   height: 94px;
   display: flex;
@@ -14,24 +14,24 @@ const Wrapper = styled.div`
   margin: 0 auto;
 `;
 
-const Logo = styled.h1`
+export const Logo = styled.h1`
   font-size: ${({ theme }) => theme.fontSize.display};
   font-weight: ${({ theme }) => theme.fontWeight.heavy};
   letter-spacing: -0.04em;
 `;
 
-const LogoLink = styled(NavLink)`
+export const LogoLink = styled(NavLink)`
   color: ${({ theme }) => theme.color.grey1};
 `;
 
-const Nav = styled.ul`
+export const Nav = styled.ul`
   display: flex;
   gap: 24px;
 `;
 
-const NavItem = styled.li``;
+export const NavItem = styled.li``;
 
-const NavItemLink = styled(NavLink)`
+export const NavItemLink = styled(NavLink)`
   color: ${({ theme }) => theme.color.grey1};
   transition: all 200ms;
 
@@ -41,7 +41,7 @@ const NavItemLink = styled(NavLink)`
   }
 `;
 
-const MyPageButton = styled.div`
+export const MyPageButton = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -54,7 +54,7 @@ const MyPageButton = styled.div`
   padding: 4px;
 `;
 
-const UserIcon = styled.div`
+export const UserIcon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,5 +63,3 @@ const UserIcon = styled.div`
   background-color: ${({ theme }) => theme.color.grey3};
   border-radius: 50%;
 `;
-
-export { Container, Wrapper, Logo, LogoLink, Nav, NavItem, NavItemLink, MyPageButton, UserIcon };
