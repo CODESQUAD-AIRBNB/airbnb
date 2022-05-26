@@ -1,5 +1,5 @@
 import * as S from '@components/GNB/GNB.style';
-import { nav, NavTypes } from '@constants';
+import { nav, NavTypes } from '@data';
 
 const Navigation = () => {
   return (
