@@ -1,20 +1,15 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import SearchBar, { SEARCH_BAR_SIZE, SearchBarTypes } from '@components/SearchBar';
+import SearchBar, { SearchBarTypes } from '@components/SearchBar';
+import { SEARCH_BAR_SIZE } from '@components/SearchBar/constants';
 
 export default {
   title: 'Components/SearchBar',
   component: SearchBar,
   args: {
-    isActiveSearchBar: true,
     size: SEARCH_BAR_SIZE.LARGE,
   },
   argTypes: {
-    isActiveSearchBar: {
-      control: {
-        type: 'boolean',
-      },
-    },
     size: {
       control: {
         type: 'radio',

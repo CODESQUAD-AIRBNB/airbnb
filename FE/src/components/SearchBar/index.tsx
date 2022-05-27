@@ -1,20 +1,28 @@
+import { useState } from 'react';
+
+import PeriodArea from '@components/SearchBar/PeriodArea';
+import PersonnelArea from '@components/SearchBar/PersonnelArea';
+import PriceArea from '@components/SearchBar/PriceArea';
 import * as S from '@components/SearchBar/SearchBar.style';
 import SearchButton from '@components/SearchBar/SearchButton';
-
-export const SEARCH_BAR_SIZE: { [key: string]: string } = {
-  SMALL: 'SMALL',
-  LARGE: 'LARGE',
-};
+import { searchBarData } from '@data';
 
 export type SearchBarTypes = {
-  isActiveSearchBar: boolean;
   size: string;
 };
 
-const SearchBar = ({ isActiveSearchBar, size }: SearchBarTypes) => {
+const SearchBar = ({ size }: SearchBarTypes) => {
+  const [isActive, setIsActive] = useState(false);
+  const { period, price, personnel } = searchBarData;
+
+  const toggleIsActive = () => setIsActive(isActive => !isActive);
+
   return (
-    <S.Container size={size}>
-      <SearchButton isButtonActive={isActiveSearchBar} size={size} />
+    <S.Container size={size} onClick={toggleIsActive}>
+      <PeriodArea size={size} period={period} />
+      <PriceArea size={size} price={price} />
+      <PersonnelArea size={size} personnel={personnel} />
+      <SearchButton isButtonActive={isActive} size={size} />
     </S.Container>
   );
 };
