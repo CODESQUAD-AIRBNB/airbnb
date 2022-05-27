@@ -2,14 +2,14 @@ import * as S from '@components/MainContent/MainContent.style';
 import { MainContentDataType } from '@components/MainContent/constants';
 
 type ContentTypes = {
-  trip: MainContentDataType;
+  categoryData: MainContentDataType;
 };
 
-export const MainCategory = ({ trip }: ContentTypes) => {
+export const MainCategory = ({ categoryData }: ContentTypes) => {
   return (
     <div>
-      <S.ImgWrapper src={trip.url} />
-      <S.Subtitle>{trip.title}</S.Subtitle>
+      <S.ImgWrapper src={categoryData.url} />
+      <S.Subtitle>{categoryData.title}</S.Subtitle>
     </div>
   );
 };

@@ -7,12 +7,12 @@ type ContentTypes = {
 
 const Content = ({ data }: ContentTypes) => {
   return (
-    <S.West>
+    <S.ServieWrapper>
       <S.ServiceTitle>{data.title}</S.ServiceTitle>
       {data.subtitle.map((subtitle, i) => (
         <S.ServiceContent key={i}>{subtitle}</S.ServiceContent>
       ))}
-    </S.West>
+    </S.ServieWrapper>
   );
 };
 

@@ -5,12 +5,12 @@ const MainContent = () => {
   return (
     <S.Container>
       <S.Wrapper>
-        <S.MainTitle>어디서나, 여행은 살아보는 거야!</S.MainTitle>
-        <S.Test>
-          {mainContentData.map((trip: MainContentDataType) => (
-            <MainCategory trip={trip} />
+        <S.MainContentTitle>어디서나, 여행은 살아보는 거야!</S.MainContentTitle>
+        <S.MainCategoryWrapper>
+          {mainContentData.map((categoryData: MainContentDataType) => (
+            <MainCategory categoryData={categoryData} />
           ))}
-        </S.Test>
+        </S.MainCategoryWrapper>
       </S.Wrapper>
     </S.Container>
   );

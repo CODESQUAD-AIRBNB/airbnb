@@ -10,13 +10,13 @@ export const Wrapper = styled.div`
   margin: 0 auto;
 `;
 
-export const MainTitle = styled.h1`
+export const MainContentTitle = styled.h1`
   font-size: ${({ theme }) => theme.fontSize.display};
   font-weight: ${({ theme }) => theme.fontWeight.regular};
   color: ${({ theme }) => theme.color.grey1};
 `;
 
-export const Test = styled.div`
+export const MainCategoryWrapper = styled.div`
   display: flex;
   gap: 15px;
 `;

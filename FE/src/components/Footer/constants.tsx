@@ -66,11 +66,11 @@ export type CompanyInfoType = {
 export const companyInfo = [
   {
     id: 1,
-    title: '개인정보처리방침',
+    title: '© 2022 Logo, Inc',
   },
   {
     id: 2,
-    title: '이용약관',
+    title: '개인정보처리방침',
   },
   {
     id: 3,
@@ -78,10 +78,14 @@ export const companyInfo = [
   },
   {
     id: 4,
-    title: '한국의 변경된 환불정책',
+    title: '이용약관',
   },
   {
     id: 5,
+    title: '한국의 변경된 환불정책',
+  },
+  {
+    id: 6,
     title: '회사 세부 정보',
   },
 ];

@@ -13,15 +13,13 @@ export const Wrapper = styled.div`
 
 export const FooterContent = styled.div`
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  margin-bottom: 30px;
+  border-bottom: 1px solid ${({ theme }) => theme.color.grey5};
 `;
 
-export const West = styled.div`
+export const ServieWrapper = styled.div`
   width: 20%;
-  margin-right: 50px;
-  margin-top: 50px;
-  margin-bottom: 80px;
+  margin: 50px 50px 80px 0px;
 `;
 
 export const ServiceTitle = styled.div`
