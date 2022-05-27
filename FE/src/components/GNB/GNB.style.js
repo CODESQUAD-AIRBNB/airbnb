@@ -2,7 +2,11 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  position: absolute;
+  top: 0;
+  left: 50%;
   height: 94px;
+  transform: translateX(-50%);
 `;
 
 export const Wrapper = styled.div`
